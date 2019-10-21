@@ -1,9 +1,47 @@
-<ion-header>
-  <ion-toolbar>
+<ion-header >
+  <ion-toolbar >
     <ion-title>
-      Tab Two
+     BOOKS LIST
     </ion-title>
   </ion-toolbar>
 </ion-header>
+<!-- (click)=" changeUrl(item)"> -->
+<ion-content  >
+  
+  <ion-card  *ngFor="let item of books">
+    <ion-item [routerLink]="['/tabs/tab3', item]" >
+      <ion-avatar slot="start">
+        <img src="../../assets/book.png">
+      </ion-avatar>
+      <ion-label>
+        <h2>{{item?.name}}</h2>
+        <h3>By {{item?.author}}</h3>
+        <h4>Ed: {{item?.ed}}</h4>
+       
+        
+      </ion-label>
+    
+    </ion-item>
+    <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+        <ion-fab-button class="fa-btn" color="light">
+          <ion-icon name="arrow-dropleft"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-list side="start">
+          <ion-fab-button class="fa-btn" id="tr-btn" color="light" (click)="bookListService.showConfirmAlert(item,1)"> 
+            <ion-icon name="trash"></ion-icon>
+          </ion-fab-button>
+          <ion-fab-button class="fa-btn" id="ed-btn" color="light" >
+            <ion-icon name="create"></ion-icon>
+          </ion-fab-button>
+         
+        </ion-fab-list>
+      </ion-fab>
 
-<ion-content></ion-content>
+  </ion-card>
+  
+
+</ion-content>
+
+
+
+

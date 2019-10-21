@@ -8,7 +8,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import{Tab4PageModule}from'./tab4/tab4.module';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -16,7 +16,8 @@ import { AppComponent } from './app.component';
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    Tab4PageModule
   ],
   bootstrap: [AppComponent]
 })

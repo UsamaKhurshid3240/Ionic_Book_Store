@@ -1,0 +1,100 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>ADD BOOK</ion-title>
+    
+  </ion-toolbar>
+  
+  <ion-fab horizontal="end" class="back-btn" vertical="top" slot="fixed"  edge>
+    
+          <ion-icon ios="ios-backspace" md="md-backspace"[routerLink]="['/tabs/tab1']" (click)="close()" ></ion-icon>
+ 
+      
+    </ion-fab>
+</ion-header>
+
+<ion-content fullscreen>
+
+
+  <ion-card class="card-back">
+    <ion-card-content >
+     
+      <ion-card class="form" >
+   
+   
+        <ion-card-content >
+        <form >
+          <ion-list >
+           
+            <ion-item>
+              <ion-label color="primary" position="floating">Name</ion-label>
+              <ion-input  id="name" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" required></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label color="primary" position="floating">Author</ion-label>
+                <ion-input id="auth" [(ngModel)]="author"  [ngModelOptions]="{standalone: true}" required></ion-input>
+              </ion-item>
+              <ion-item>
+                  <ion-label color="primary" position="floating">Edition</ion-label>
+                  <ion-input id="ed" [(ngModel)]="edition"  [ngModelOptions]="{standalone: true}" required></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label color="primary" position="floating">Price </ion-label>
+                    <ion-input id="pric" [(ngModel)]="price"  [ngModelOptions]="{standalone: true}" required></ion-input>
+                  </ion-item>
+            <ion-item>
+                <ion-label color="primary" position="floating">Description</ion-label>
+              <ion-textarea id="desc" [(ngModel)]="description"  [ngModelOptions]="{standalone: true}" required></ion-textarea>
+            </ion-item>
+         <ion-item>
+          <button ion-button class="add-btn" (click)="addbook()" >SAVE</button>
+         </ion-item>
+          </ion-list>
+         
+        </form>
+        </ion-card-content>
+      
+    
+    
+      </ion-card>
+    
+    
+      
+    </ion-card-content>
+  </ion-card>
+  
+
+</ion-content>
+
+<!-- 
+
+<ion-header translucent>
+  <ion-toolbar>
+      <ion-button slot="start">
+          <ion-back-button></ion-back-button>
+      </ion-button>
+      <ion-title>Add Game</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <form onsubmit="prr()" >
+      <ion-list lines="full" class="ion-no-padding ion-no-margin">
+          <ion-item>
+              <ion-label position="stacked">Name
+                  
+              </ion-label>
+              <ion-input  type="text" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" ></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label position="stacked">Developer
+                  
+              </ion-label>
+              <ion-input  type="text" [(ngModel)]="dev"  [ngModelOptions]="{standalone: true}" ></ion-input>
+          </ion-item>
+          
+      </ion-list>
+      <div class="ion-padding">
+          <ion-button expand="block" type="submit" [(ngModel)]="des"  [ngModelOptions]="{standalone: true}"class="ion-no-margin">Submit</ion-button>
+      </div>
+  </form>
+</ion-content> -->
